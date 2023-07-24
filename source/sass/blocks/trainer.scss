@@ -1,0 +1,246 @@
+.trainer {
+  background-color: $color-default-white;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.trainer__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 105px;
+
+  @include vp-1199 {
+    padding: 0 56px 100px;
+  }
+
+  @include vp-767 {
+    padding: 0 47px 70px;
+  }
+}
+
+.trainer__wrapper h3 {
+  margin: 0 0 48px 0;
+  color: $color-sapphire;
+  font-family: $ff-primary;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  text-align: left;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.trainer__swiper {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.trainer__list {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+}
+
+.trainer__card {
+  cursor: pointer;
+  max-width: 260px;
+  width: 22.4%;
+  position: relative;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+
+  &:hover h4,
+  &:focus h4 {
+    display: none;
+  }
+
+  &:hover .trainer__invisible,
+  &:focus .trainer__invisible {
+    display: block;
+  }
+
+  @include vp-1199 {
+    max-width: 268px;
+    width: 47.7%;
+
+    &:active .trainer__invisible {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+    width: 100%;
+  }
+}
+
+.trainer__card h4 {
+  align-self: center;
+  transform: translateY(470%);
+  margin: 0;
+  padding-bottom: 25px;
+  color: $color-default-white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+  position: absolute;
+  z-index: 2;
+}
+
+.trainer__card:hover::after,
+.trainer__card:focus::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #102654;
+  opacity: 0.89;
+}
+
+.trainer__invisible {
+  display: none;
+}
+
+.trainer__info {
+  max-width: 260px;
+  width: 100%;
+  padding: 58px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    padding: 48px 10px 10px;
+    max-width: 226px;
+  }
+}
+
+.trainer__info h5 {
+  color: $color-default-white;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.trainer__info span {
+  text-align: center;
+  color: #b6bdcc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 23px;
+}
+
+.trainer__info-list {
+  width: 76.4%;
+  color: $color-default-white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-left: 25px;
+  align-self: center;
+
+  @include vp-767 {
+    width: 63.3%;
+    padding-left: 0;
+  }
+}
+
+.trainer__info-list li {
+  width: 100%;
+  position: relative;
+}
+
+.trainer__info-list li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -17px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: $color-default-white;
+}
+
+.trainer__info-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.trainer__toggle {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+}
+
+.trainer__toggle.trainer-toggle-prev {
+  top: 240px;
+  left: 50px;
+
+  @include vp-1199 {
+    top: 240px;
+    left: 50px;
+  }
+
+  @include vp-767 {
+    top: 220px;
+    left: 15px;
+  }
+}
+
+.trainer__toggle.trainer-toggle-next {
+  position: absolute;
+  top: 240px;
+  right: 50px;
+
+  @include vp-1199 {
+    top: 240px;
+    right: 50px;
+  }
+
+  @include vp-767 {
+    top: 220px;
+    right: 15px;
+  }
+}
+
+.trainer__img img {
+  background-color: #c4c2c2;
+
+  @include vp-1199 {
+    width: 268px;
+    height: 294px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+}

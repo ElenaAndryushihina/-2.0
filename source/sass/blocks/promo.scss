@@ -1,0 +1,277 @@
+.promo__wrapper {
+  margin: 0 auto;
+  padding: 135px 0 120px;
+
+  @include vp-1199 {
+    padding: 91px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 70px;
+  }
+}
+
+.promo__wrapper h3 {
+  grid-column: 1/3;
+  margin: 0 auto 34px;
+  color: $color-sapphire;
+  font-family: $ff-primary;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  text-align: center;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    margin-bottom: 42px;
+  }
+}
+
+.promo__list {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 48.3%);
+  gap: 40px 3.4%;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 48%);
+    gap: 30px 4%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+}
+
+.promo__card {
+  justify-content: center;
+  width: 100%;
+  padding: 35px 35px 35px 30px;
+  display: flex;
+  flex-direction: column;
+  border-image: $promo-border 1 / 7px stretch;
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.promo__card:first-child {
+  justify-content: start;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 50%;
+  grid-row: 1/3;
+  max-height: 462px;
+  border: none;
+
+  @include vp-1199 {
+    justify-content: center;
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+  }
+}
+
+.promo__card h4 {
+  margin: 0 0 15px;
+  padding-left: 5px;
+  color: #1c3374;
+  font-family: $ff-secondary;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.promo__card p {
+  margin: 0;
+  padding-left: 5px;
+  color: #1c3374;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.promo__card:nth-child(2) p {
+  br {
+    display: none;
+
+    @include vp-1199 {
+      display: block;
+    }
+  }
+}
+
+.promo__card a {
+  display: block;
+  color: #1c3374;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+  padding: 5px;
+  width: 80px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    position: relative;
+    transform: translateX(5px);
+    z-index: 2;
+    border: none;
+    outline: 1px solid #1c3374;
+  }
+
+  &:focus::after {
+    display: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include vp-767 {
+    align-self: center;
+  }
+}
+
+.promo__card:not(:first-child) a::after {
+  content: "";
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  bottom: 3px;
+  left: 5px;
+  background-color: #1c3374;
+}
+
+.promo__card:first-child article {
+  background-color: $color-torch-red;
+  padding: 45px 45px 45px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @include vp-1199 {
+    width: 41.3%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 299px;
+  }
+}
+
+.promo__card:first-child h4 {
+  padding-left: 5px;
+  color: $color-default-white;
+  font-size: 28px;
+  line-height: 110%;
+  margin-bottom: 9px;
+}
+
+.promo__card:first-child b {
+  padding-left: 5px;
+  color: $color-default-white;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 84%;
+  margin-bottom: 30px;
+}
+
+.promo__card:first-child p {
+  padding-left: 5px;
+  color: $color-default-white;
+  font-size: 18px;
+}
+
+.promo__card:first-child a {
+  color: $color-default-white;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  width: 79px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 79px;
+    height: 1px;
+    bottom: 3px;
+    left: 5px;
+    background-color: $color-default-white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    width: 99px;
+    padding: 5px 0;
+    border: none;
+    outline: 1px solid $color-default-white;
+  }
+
+  &:focus::after {
+    display: none;
+  }
+
+  &:active {
+    opacity: 1;
+    width: 79px;
+    padding: 0;
+    outline: none;
+    border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.promo__img img {
+  background-color: #3853f0;
+
+  @include vp-1199 {
+    width: 399px;
+    height: 462px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 299px;
+  }
+}

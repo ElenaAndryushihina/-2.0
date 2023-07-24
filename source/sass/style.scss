@@ -2,6 +2,9 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/data-tabs";
+@import "vendor/data-accordion";
+
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -18,11 +21,27 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/nav";
+@import "blocks/social";
+@import "blocks/hero";
+@import "blocks/gym";
+@import "blocks/tickets";
+@import "blocks/supergames";
+@import "blocks/trainer";
+@import "blocks/advantages";
+@import "blocks/promo";
+@import "blocks/faq";
+@import "blocks/tabs";
+@import "blocks/accordion";
+@import "blocks/feedback";
+@import "blocks/contacts";
+@import "blocks/free-contacts";
+@import "blocks/swiper-toggle";
 @import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/input-message";
+@import "blocks/btns";
 
 // ---------------------------------
 

@@ -1,0 +1,175 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__element {
+  position: relative;
+  width: 100%;
+  padding: 32px 48px 25px 0;
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
+}
+
+.accordion__element.is-active .accordion__button {
+  border: none;
+  background-color: #1c3374;
+  z-index: 1;
+}
+
+.accordion__element.is-active .accordion__button::after {
+  background-color: #1c3374;
+  z-index: 0;
+}
+
+.accordion__element.is-active .accordion__button::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 12px;
+  width: 18px;
+  height: 1px;
+  background-color: $color-default-white;
+  z-index: 2;
+
+  @include vp-767 {
+    width: 12px;
+    top: 15px;
+    right: 10px;
+  }
+}
+
+.accordion__element:last-child {
+  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+}
+
+.accordion__element h4 {
+  margin: 0 0 14px;
+  color: $color-sapphire;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include vp-1199 {
+    line-height: 100%;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 120%;
+  }
+}
+
+.accordion__content {
+  transition: 0.8s;
+}
+
+.accordion__content p {
+  margin: 0;
+  color: $color-sapphire;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  max-width: 81.4%;
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.accordion__button {
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 25px;
+  background-color: $color-transparent;
+  border: 1px solid #1c3374;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border: none;
+    background-color: #1c3374;
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $color-default-white;
+    right: 12px;
+
+    @include vp-767 {
+      right: 10px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-default-white;
+    right: 12px;
+
+    @include vp-767 {
+      right: 10px;
+    }
+  }
+
+  &:active {
+    border: none;
+    background-color: #1c3374;
+  }
+
+  &:active::after {
+    background-color: #1c3374;
+    z-index: 0;
+  }
+}
+
+.accordion__button::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 11px;
+  width: 18px;
+  height: 1px;
+  background-color: #1c3374;
+  z-index: 1;
+
+  @include vp-767 {
+    width: 12px;
+    top: 15px;
+    right: 9px;
+  }
+}
+
+.accordion__button::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 11px;
+  width: 18px;
+  transform: rotate(90deg);
+  height: 1px;
+  background-color: #1c3374;
+  z-index: 1;
+
+  @include vp-767 {
+    width: 12px;
+    top: 15px;
+    right: 9px;
+  }
+}

@@ -1,0 +1,304 @@
+.tickets {
+  background-color: $color-ghost-white;
+}
+
+.tickets__wrapper {
+  margin: 0 auto;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 70px;
+  }
+}
+
+.tickets__wrapper h3 {
+  margin: 0 auto 25px;
+  font-family: $ff-primary;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  color: $color-sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    margin-bottom: 27px;
+  }
+}
+
+.tickets__nav {
+  margin: 0 auto 39px;
+  width: 29.4%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @include vp-1199 {
+    margin-bottom: 45px;
+    width: 49%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+}
+
+.tickets__button {
+  position: relative;
+  padding-bottom: 20px;
+  font-family: $ff-secondary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: $color-sapphire;
+  opacity: 0.5;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.tickets__button:hover::after,
+.tickets__button:focus::after,
+.tickets__button:active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  background-color: $color-torch-red;
+}
+
+.tickets__button.is-active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  background-color: $color-torch-red;
+}
+
+.tickets__button.is-active {
+  opacity: 1;
+}
+
+.tickets__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tickets__list {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex: 1 0 33.33%;
+  justify-content: space-between;
+  z-index: 1;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tickets__card {
+  width: 31%;
+  background-color: $color-default-white;
+  padding: 55px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include vp-1199 {
+    width: 65.2%;
+    height: 31.46%;
+    padding: 65px 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 55px 40px;
+  }
+}
+
+.tickets__card:not(:last-child) {
+  @include vp-1199 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
+}
+
+.tickets__card:hover,
+.tickets__card:focus,
+.tickets__card:active {
+  cursor: pointer;
+  border-image: $tickets-border 1 / 7px stretch;
+}
+
+.tickets__card:hover a,
+.tickets__card:focus a,
+.tickets__card:active a {
+  background: $tickets-border;
+  border: none;
+  color: $color-default-white;
+}
+
+.tickets__card h4 {
+  margin: 0 0 10px 0;
+  padding: 0 30px;
+  color: $color-sapphire;
+  text-align: center;
+  font-family: $ff-secondary;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110.15%;
+
+  @include vp-767 {
+    font-size: 22px;
+  }
+}
+
+.tickets__card p {
+  color: $color-sapphire;
+  margin: 0 0 90px;
+
+  @include vp-1199 {
+    margin: 0 0 96px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 70px;
+  }
+}
+
+.tickets__card span {
+  position: absolute;
+  z-index: 0;
+  top: 130px;
+  left: auto;
+  color: #e8e8e8;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 150%;
+  opacity: 0.4;
+
+  @include vp-1199 {
+    top: 150px;
+  }
+
+  @include vp-767 {
+    top: 123px;
+    font-size: 80px;
+  }
+}
+
+.tickets__card b {
+  color: $color-egyptian-blue;
+  font-size: 60px;
+  line-height: 84%;
+  z-index: 2;
+  margin-bottom: 57px;
+
+  @include vp-767 {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+}
+
+.tickets__card svg {
+  width: 24px;
+  height: 33px;
+}
+
+.tickets__card a {
+  padding: 25px 20px 35px;
+  max-height: 14.3%;
+  width: 74%;
+  display: block;
+  color: $color-sapphire;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid $color-sapphire;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $tickets-border;
+    color: $color-default-white;
+    border: none;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include vp-1199 {
+    width: 57%;
+    padding: 23px 6px;
+  }
+
+  @include vp-767 {
+    width: 98.1%;
+  }
+}
+
+.tickets__background {
+  width: 321px;
+  height: 384px;
+  position: absolute;
+  transform: rotate(-28deg);
+  right: -206px;
+  bottom: -98px;
+  z-index: 0;
+
+  @include vp-767 {
+    display: none;
+  }
+}

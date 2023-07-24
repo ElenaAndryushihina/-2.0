@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initTabs} from './modules/tabs/init-tabs';
+import {initAccordions} from './modules/accordions/init-accordions';
 
 // ---------------------------------
 
@@ -21,6 +23,42 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+  });
+});
+
+// Табы
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initTabs();
+  });
+});
+
+// Аккордеон
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initAccordions();
+  });
+});
+
+// Видео
+
+window.addEventListener('DOMContentLoaded', function () {
+  const video = document.querySelector('.gym__video');
+  const playerButton = document.querySelector('.gym__button-play');
+
+  playerButton.addEventListener('click', function () {
+    playerButton.classList.add('visually-hidden');
+    video.classList.add('visually-hidden');
+
+    if (video.classList.contains('ready')) {
+      return;
+    }
+    video.classList.add('ready');
+    video.insertAdjacentHTML('beforebegin', `<iframe width=100% height=100% src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>`);
   });
 });
 

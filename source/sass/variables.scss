@@ -10,12 +10,25 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
+$color-torch-red:                   #ed0233;
+$color-sapphire:                    #102654;
+$color-egyptian-blue:               #103aae;
+$color-ghost-white:                 #f8f9fc;
+$color-black-russian:               #030a1a;
+$hero-img-bg:                       #003D85;
+$color-error:                       #ff121f;
+$color-success:                     #18f111;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$gym-bg-button:                     linear-gradient(230deg, #ed0233 25%, #003eb7 75%);
+$advantages-bg-count:               linear-gradient(160deg, #d10a42 5%, #0041ca 60%);
+$tickets-border:                    linear-gradient(135deg, #ed0233 25%, #003eb7 75%);
+$promo-border:                      linear-gradient(160deg, #ed0233 10%, #003eb7 90%);
+$faq-bg-button:                     linear-gradient(120deg, #ed0233 20%, #003eb7 90%);
+$hero-bg-desktop:                   conic-gradient(from 181deg at 16.03% 39.06%, #003D85 12deg, #B80027 263deg, #003D85 333deg);
+$hero-bg-tablet:                    conic-gradient(from 175deg at 20.70% 35.74%, #003D85 12deg, #B80027 280deg, #003D85 360deg);
+$hero-bg-mobile:                    conic-gradient(from 210deg at 35.31% 34.22%, #003D85 12deg, #B80027 283deg, #003D85 360deg);
 
 // Typography
 // ---------------------------------
@@ -26,8 +39,8 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
-
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-primary:                        "Alumni Sans", "Arial", sans-serif;
+$ff-secondary:                      "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -44,15 +57,11 @@ $trans-600:                         0.6s $tf-default;
 // ---------------------------------
 
 $vp-320:                            320px;
-$vp-375:                            375px;
 $vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
+$vp-1200:                           1200px;
 
 // Retina
 // ---------------------------------
 
 $retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$retina-dppx:                       1.5dppx
