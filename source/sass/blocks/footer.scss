@@ -17,9 +17,9 @@
   @include vp-767 {
     display: grid;
     grid-template-columns: 100%;
-    row-gap: 40px;
+    row-gap: 33px;
     align-items: start;
-    padding: 50px 15px 52px;
+    padding: 46px 15px 52px;
   }
 }
 
@@ -55,6 +55,11 @@
   vertical-align: middle;
   width: 88px;
   height: 32px;
+
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+  }
 
   @include vp-767 {
     width: 68px;

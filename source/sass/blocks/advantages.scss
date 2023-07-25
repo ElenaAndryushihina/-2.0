@@ -10,16 +10,16 @@
   flex-direction: column;
 
   @include vp-1199 {
-    padding: 91px 10px 100px 0;
+    padding: 91px 10px 76px 0;
   }
 
   @include vp-767 {
-    padding: 63px 0 70px;
+    padding: 63px 0 57px;
   }
 }
 
 .advantages__wrapper h3 {
-  margin: 0 0 55px 0;
+  margin: 0 0 52px 0;
   color: $color-sapphire;
   font-family: $ff-primary;
   font-size: 54px;
@@ -35,21 +35,24 @@
   }
 
   @include vp-767 {
-    margin: 0 0 52px 0;
+    margin: 0 0 47px 0;
     font-size: 32px;
     letter-spacing: 0.96px;
   }
 }
 
 .advantages__list {
+  justify-content: end;
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 32.7% 23.1% 32.7%;
+  grid-template-columns: 30.7% 23.1% 32.7%;
+  grid-template-rows: 50% 50%;
   column-gap: 5.7%;
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 47.1%);
+    grid-template-rows: 22% 49.5% 25%;
   }
 
   @include vp-767 {
@@ -71,14 +74,17 @@
 
   @include vp-1199 {
     justify-self: center;
-    width: 65%;
-    padding: 45px 34px;
+    width: 66%;
+    padding: 42px 34px 31px;
     grid-column: 1/3;
     grid-row: 2;
+    transform: translate(4.5px, 6px);
   }
 
   @include vp-767 {
     width: 100%;
+    transform: translate(0, 0);
+    min-height: 239px;
   }
 
   & b {
@@ -88,6 +94,10 @@
     margin-bottom: 15px;
 
     @include vp-1199 {
+      margin-bottom: 12px;
+    }
+
+    @include vp-767 {
       margin-bottom: 10px;
     }
   }
@@ -95,11 +105,15 @@
   & h4 {
     color: $color-default-white;
     font-size: 26px;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
 
     @include vp-1199 {
       font-size: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 15px;
     }
   }
 
@@ -114,39 +128,77 @@
   }
 }
 
+.advantages__item:nth-child(1) {
+  @include vp-1199 {
+    grid-template-columns: 38% 62%;
+  }
+}
+
+.advantages__item:nth-child(2) {
+  @include vp-1199 {
+    grid-template-columns: 28% 72%;
+  }
+}
+
+.advantages__item:nth-child(2) p {
+  margin: -4px 0 9px 0;
+}
+
+
+.advantages__item:nth-child(4) {
+  padding-top: 22%;
+
+  @include vp-1199 {
+    grid-template-columns: 37% 63%;
+    grid-template-rows: 38% 62%;
+    padding-top: 16.2%;
+  }
+
+  @include vp-767 {
+    padding-top: 45px;
+  }
+}
+
+.advantages__item:nth-child(5) {
+  padding-top: 22%;
+
+  @include vp-1199 {
+    grid-template-columns: 28% 72%;
+    padding-top: 16.2%;
+  }
+
+  @include vp-767 {
+    padding-top: 34px;
+  }
+}
+
 .advantages__item:nth-child(1),
 .advantages__item:nth-child(2) {
-  padding-bottom: 18%;
+  padding-bottom: 22%;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1199 {
     border: none;
-    padding-bottom: 15.9%;
+    padding-bottom: 14.9%;
+    grid-template-rows: 40% 72%;
   }
 
   @include vp-767 {
-    padding-bottom: 50px;
+    padding-bottom: 33px;
   }
 }
 
-.advantages__item:nth-child(4),
-.advantages__item:nth-child(5) {
-  padding-top: 18%;
-
-  @include vp-1199 {
-    padding-top: 15.9%;
-  }
-
-  @include vp-767 {
-    padding-top: 50px;
-  }
-}
 
 .advantages__item {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, auto);
+  grid-template-rows: 40% 60%;
   column-gap: 9%;
+
+  @include vp-1199 {
+    column-gap: 0;
+  }
 
   @include vp-767 {
     display: flex;
@@ -162,7 +214,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   grid-column: 1;
-  grid-row: 1/4;
+  grid-row: 1/3;
   align-self: start;
 
   @include vp-1199 {
@@ -181,7 +233,7 @@
   line-height: 150%;
   grid-column: 1;
   align-self: end;
-  grid-row: 3;
+  grid-row: 2;
   padding-top: 19%;
 
   @include vp-1199 {
@@ -191,7 +243,7 @@
   @include vp-767 {
     align-self: center;
     padding-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 }
 
@@ -204,6 +256,7 @@
   font-weight: 700;
   line-height: 87%;
   grid-column: 2;
+  grid-row: 1;
 
   @include vp-1199 {
     font-size: 20px;
@@ -211,7 +264,7 @@
 
   @include vp-767 {
     align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
 }
 
@@ -223,7 +276,7 @@
   font-weight: 300;
   line-height: 140%;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
   align-self: end;
 
   @include vp-767 {

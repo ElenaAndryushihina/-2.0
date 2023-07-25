@@ -15,7 +15,7 @@ $color-sapphire:                    #102654;
 $color-egyptian-blue:               #103aae;
 $color-ghost-white:                 #f8f9fc;
 $color-black-russian:               #030a1a;
-$hero-img-bg:                       #003D85;
+$hero-img-bg:                       #003d85;
 $color-error:                       #ff121f;
 $color-success:                     #18f111;
 
@@ -26,9 +26,9 @@ $advantages-bg-count:               linear-gradient(160deg, #d10a42 5%, #0041ca 
 $tickets-border:                    linear-gradient(135deg, #ed0233 25%, #003eb7 75%);
 $promo-border:                      linear-gradient(160deg, #ed0233 10%, #003eb7 90%);
 $faq-bg-button:                     linear-gradient(120deg, #ed0233 20%, #003eb7 90%);
-$hero-bg-desktop:                   conic-gradient(from 181deg at 16.03% 39.06%, #003D85 12deg, #B80027 263deg, #003D85 333deg);
-$hero-bg-tablet:                    conic-gradient(from 175deg at 20.70% 35.74%, #003D85 12deg, #B80027 280deg, #003D85 360deg);
-$hero-bg-mobile:                    conic-gradient(from 210deg at 35.31% 34.22%, #003D85 12deg, #B80027 283deg, #003D85 360deg);
+$hero-bg-desktop:                   conic-gradient(from 181deg at 16.03% 39.06%, #003d85 12deg, #b80027 263deg, #003d85 333deg);
+$hero-bg-tablet:                    conic-gradient(from 175deg at 20.7% 35.74%, #003d85 12deg, #b80027 280deg, #003d85 360deg);
+$hero-bg-mobile:                    conic-gradient(from 210deg at 35.31% 34.22%, #003d85 12deg, #b80027 283deg, #003d85 360deg);
 
 // Typography
 // ---------------------------------
@@ -64,4 +64,4 @@ $vp-1200:                           1200px;
 // ---------------------------------
 
 $retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx
+$retina-dppx:                       1.5dppx;

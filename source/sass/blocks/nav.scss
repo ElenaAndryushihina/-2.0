@@ -24,10 +24,11 @@
   @include vp-767 {
     justify-content: start;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 27% 27% 27%;
     grid-auto-flow: column;
-    column-gap: 0;
+    column-gap: 10%;
+    row-gap: 9%;
   }
 }
 
@@ -35,6 +36,8 @@
   width: 100%;
 
   @include vp-767 {
+    align-self: center;
+
     &:first-child {
       grid-row-start: 2;
     }

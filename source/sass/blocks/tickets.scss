@@ -14,12 +14,12 @@
   }
 
   @include vp-767 {
-    padding: 63px 15px 70px;
+    padding: 63px 15px 69px;
   }
 }
 
 .tickets__wrapper h3 {
-  margin: 0 auto 25px;
+  margin: 0 auto 17px;
   font-family: $ff-primary;
   font-size: 54px;
   font-style: normal;
@@ -36,7 +36,7 @@
   @include vp-767 {
     font-size: 32px;
     letter-spacing: 0.96px;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
   }
 }
 
@@ -60,7 +60,7 @@
 
 .tickets__button {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   font-family: $ff-secondary;
   font-size: 20px;
   font-style: normal;
@@ -141,7 +141,7 @@
 .tickets__card {
   width: 31%;
   background-color: $color-default-white;
-  padding: 55px 40px;
+  padding: 59px 40px 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,13 +149,14 @@
 
   @include vp-1199 {
     width: 65.2%;
-    height: 31.46%;
-    padding: 65px 40px;
+    padding: 63px 40px;
+    min-height: 448px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 55px 40px;
+    padding: 49px 40px;
+    min-height: 384px;
   }
 }
 
@@ -202,14 +203,14 @@
 
 .tickets__card p {
   color: $color-sapphire;
-  margin: 0 0 90px;
+  margin: 0 0 86px;
 
   @include vp-1199 {
-    margin: 0 0 96px;
+    margin: 0 0 86px;
   }
 
   @include vp-767 {
-    margin: 0 0 70px;
+    margin: 0 0 64px;
   }
 }
 
@@ -225,11 +226,11 @@
   opacity: 0.4;
 
   @include vp-1199 {
-    top: 150px;
+    top: 134px;
   }
 
   @include vp-767 {
-    top: 123px;
+    top: 118px;
     font-size: 80px;
   }
 }
@@ -241,15 +242,14 @@
   z-index: 2;
   margin-bottom: 57px;
 
+  @include vp-1199 {
+    margin-bottom: 54px;
+  }
+
   @include vp-767 {
     font-size: 48px;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
   }
-}
-
-.tickets__card svg {
-  width: 24px;
-  height: 33px;
 }
 
 .tickets__card a {
@@ -297,6 +297,12 @@
   right: -206px;
   bottom: -98px;
   z-index: 0;
+
+  @include vp-1199 {
+    right: -74px;
+    bottom: -106px;
+    transform: rotate(-36deg);
+  }
 
   @include vp-767 {
     display: none;
