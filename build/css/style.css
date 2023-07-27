@@ -4780,8 +4780,6 @@ button,
 }
 
 .contacts__item:nth-child(2n) {
-  -ms-grid-column: 1;
-  grid-column: 1;
   -ms-grid-row: 2;
   grid-row: 2;
 }
