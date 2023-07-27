@@ -61,7 +61,7 @@
   }
 }
 
-.advantages__item:nth-child(3) {
+.advantages__item:nth-child(3n) {
   margin: 0 auto;
   width: 100%;
   background-color: #1c3374;
@@ -128,24 +128,19 @@
   }
 }
 
-.advantages__item:nth-child(1) {
+.advantages__item:first-child {
   @include vp-1199 {
     grid-template-columns: 38% 62%;
   }
 }
 
-.advantages__item:nth-child(2) {
+.advantages__item:nth-child(n+2) {
   @include vp-1199 {
     grid-template-columns: 28% 72%;
   }
 }
 
-.advantages__item:nth-child(2) p {
-  margin: -4px 0 9px 0;
-}
-
-
-.advantages__item:nth-child(4) {
+.advantages__item:nth-child(4n) {
   padding-top: 22%;
 
   @include vp-1199 {
@@ -159,11 +154,10 @@
   }
 }
 
-.advantages__item:nth-child(5) {
+.advantages__item:nth-child(5n) {
   padding-top: 22%;
 
   @include vp-1199 {
-    grid-template-columns: 28% 72%;
     padding-top: 16.2%;
   }
 
@@ -172,8 +166,7 @@
   }
 }
 
-.advantages__item:nth-child(1),
-.advantages__item:nth-child(2) {
+.advantages__item:nth-child(-n+2) {
   padding-bottom: 22%;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 
@@ -187,7 +180,6 @@
     padding-bottom: 33px;
   }
 }
-
 
 .advantages__item {
   width: 100%;

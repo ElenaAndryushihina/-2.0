@@ -76,11 +76,11 @@
   }
 }
 
-.contacts__item:nth-child(1) {
+.contacts__item:first-child {
   position: relative;
 }
 
-.contacts__item:nth-child(1)::after {
+.contacts__item:first-child::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -99,7 +99,7 @@
   }
 }
 
-.contacts__item:nth-child(2) {
+.contacts__item:nth-child(2n) {
   grid-column: 1;
   grid-row: 2;
 }

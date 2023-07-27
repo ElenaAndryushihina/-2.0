@@ -36,6 +36,7 @@
   width: 100%;
   display: block;
   outline: none;
+  align-self: center;
 
   &:hover,
   &:focus {
@@ -51,10 +52,8 @@
   }
 }
 
-.footer__logo-link svg {
-  vertical-align: middle;
-  width: 88px;
-  height: 32px;
+.footer__logo-link img {
+  object-fit: contain;
 
   @include vp-1199 {
     width: 82px;

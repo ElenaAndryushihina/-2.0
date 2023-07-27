@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initAccordions} from './modules/accordions/init-accordions';
+import {initTrainerSwiper} from './modules/sliders/init-slider-trainer';
+import {initFeedbackSwiper} from './modules/sliders/init-slider-feedback';
 
 // ---------------------------------
 
@@ -13,38 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
-  });
-});
-
-// Табы
-
-window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('load', () => {
-    initTabs();
-  });
-});
-
-// Аккордеон
-
-window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('load', () => {
-    initAccordions();
-  });
-});
-
-// Видео
-
-window.addEventListener('DOMContentLoaded', function () {
   const video = document.querySelector('.gym__video');
   const playerButton = document.querySelector('.gym__button-play');
 
@@ -59,6 +29,22 @@ window.addEventListener('DOMContentLoaded', function () {
     video.insertAdjacentHTML('beforebegin', `<iframe width=100% height=100% src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1" title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>`);
+  });
+
+  // Modules
+  // ---------------------------------
+
+  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+  // в load следует добавить скрипты, не участвующие в работе первого экрана
+  window.addEventListener('load', () => {
+    initModals();
+    initTabs();
+    initAccordions();
+    initTrainerSwiper();
+    initFeedbackSwiper();
+    const form = new Form();
+    window.form = form;
+    form.init();
   });
 });
 

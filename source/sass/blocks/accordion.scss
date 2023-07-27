@@ -19,7 +19,7 @@
   }
 }
 
-.accordion__element:nth-child(2) {
+.accordion__element:nth-child(2n) {
   @include vp-1199 {
     padding: 35px 48px 14px 0;
   }
@@ -29,7 +29,7 @@
   }
 }
 
-.accordion__element:nth-child(3) {
+.accordion__element:nth-child(3n) {
   @include vp-1199 {
     padding: 35px 48px 14px 0;
   }
@@ -39,7 +39,7 @@
   }
 }
 
-.accordion__element:nth-child(4) {
+.accordion__element:nth-child(4n) {
   @include vp-1199 {
     padding: 28px 48px 13px 0;
   }

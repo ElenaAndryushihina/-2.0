@@ -191,17 +191,20 @@
     outline: none;
   }
 
-  &:hover svg:nth-child(2),
-  &:focus svg:nth-child(2),
-  &:disabled svg:nth-child(2) {
+  &:hover svg:nth-child(2n),
+  &:focus svg:nth-child(2n),
+  &:disabled svg:nth-child(2n) {
     fill: $color-sapphire;
   }
 
-  &:hover svg:nth-child(1),
-  &:focus svg:nth-child(1),
-  &:disabled svg:nth-child(1) {
-    stroke: $color-sapphire;
-    stroke-opacity: 1;
+  &:hover svg:first-child,
+  &:focus svg:first-child,
+  &:disabled svg:first-child {
+    opacity: 1;
+    background: $color-sapphire;
+    border: 2px solid transparent;
+    mask: $color-sapphire padding-box, $color-sapphire;
+    mask-composite: exclude;
   }
 
   &:active::after {
@@ -254,12 +257,16 @@
   z-index: 4;
 }
 
-.gym__button-play svg:nth-child(1) {
-  stroke: url(#paint0_linear_1_294);
-  stroke-opacity: 0.2;
-  stroke-width: 2px;
+.gym__button-play svg:first-child {
   top: calc(50% - 50px);
   left: calc(50% - 50px);
+  border-radius: 50%;
+  inset: 0;
+  opacity: 0.2;
+  background: $gym-bg-mask;
+  border: 2px solid transparent;
+  mask: $gym-bg-mask padding-box, $gym-bg-mask;
+  mask-composite: exclude;
 
   @include vp-1199 {
     width: 73px;
@@ -269,7 +276,7 @@
   }
 }
 
-.gym__button-play svg:nth-child(2) {
+.gym__button-play svg:nth-child(2n) {
   fill: $color-default-white;
   top: calc(50% - 8px);
   left: calc(50% - 7px);
