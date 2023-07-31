@@ -7,7 +7,7 @@
 .accordion__element {
   position: relative;
   width: 100%;
-  padding: 31px 48px 19px 0;
+  padding: 31px 48px 23px 0;
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 
   @include vp-1199 {
@@ -15,27 +15,31 @@
   }
 
   @include vp-767 {
-    padding: 21px 35px 20px 0;
+    padding: 24px 0 18px;
   }
 }
 
 .accordion__element:nth-child(2n) {
+  padding: 34px 48px 14px 0;
+
   @include vp-1199 {
     padding: 35px 48px 14px 0;
   }
 
   @include vp-767 {
-    padding: 21px 35px 20px 0;
+    padding: 23px 0 18px;
   }
 }
 
 .accordion__element:nth-child(3n) {
+  padding: 33px 48px 15px 0;
+
   @include vp-1199 {
     padding: 35px 48px 14px 0;
   }
 
   @include vp-767 {
-    padding: 21px 35px 20px 0;
+    padding: 21px 0 18px;
   }
 }
 
@@ -45,35 +49,68 @@
   }
 
   @include vp-767 {
-    padding: 21px 35px 20px 0;
+    padding: 21px 0 18px;
   }
 }
 
+.accordion__element:nth-child(n+3) button {
+  top: 25px;
+}
+
 .accordion__element.is-active .accordion__button {
-  border: none;
-  background-color: #1c3374;
-  z-index: 1;
+  background-color: $color-transparent;
+  border: 1px solid #1c3374;
+
+  &:hover {
+    border: none;
+    background-color: #1c3374;
+    outline: none;
+  }
+
+  &:hover::before {
+    background-color: $color-default-white;
+  }
+
+  &:focus-visible {
+    border: none;
+    background-color: #1c3374;
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    border: none;
+    background-color: #1c3374;
+  }
+
+  &:active::after {
+    display: block;
+    background-color: $color-default-white;
+  }
+
+  &:active::before {
+    background-color: $color-default-white;
+  }
 }
 
 .accordion__element.is-active .accordion__button::after {
-  background-color: #1c3374;
-  z-index: 0;
+  display: none;
 }
 
 .accordion__element.is-active .accordion__button::before {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: 12px;
-  width: 18px;
-  height: 1px;
-  background-color: $color-default-white;
-  z-index: 2;
+  background-color: #1c3374;
 
   @include vp-767 {
     width: 12px;
-    top: 15px;
-    right: 10px;
+  }
+}
+
+.accordion__element.is-active h4 {
+  @include vp-767 {
+    margin-bottom: 13px;
   }
 }
 
@@ -97,7 +134,8 @@
   @include vp-767 {
     font-size: 18px;
     line-height: 120%;
-    margin-bottom: 14px;
+    margin-bottom: 0;
+    width: 89%;
   }
 }
 
@@ -146,31 +184,30 @@
     opacity: 0.3;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: none;
     background-color: #1c3374;
     outline: none;
   }
 
   &:hover::before,
-  &:focus::before {
+  &:hover::after {
     background-color: $color-default-white;
-    right: 12px;
-
-    @include vp-767 {
-      right: 10px;
-    }
   }
 
-  &:hover::after,
-  &:focus::after {
-    background-color: $color-default-white;
-    right: 12px;
+  &:focus {
+    outline: none;
+  }
 
-    @include vp-767 {
-      right: 10px;
-    }
+  &:focus-visible {
+    border: none;
+    background-color: #1c3374;
+    outline: none;
+  }
+
+  &:focus-visible::before,
+  &:focus-visible::after {
+    background-color: $color-default-white;
   }
 
   &:active {
@@ -179,16 +216,26 @@
   }
 
   &:active::after {
-    background-color: #1c3374;
-    z-index: 0;
+    display: none;
+  }
+
+  &:active::before {
+    background-color: $color-default-white;
+  }
+
+  @include vp-767 {
+    top: 40px;
   }
 }
 
 .accordion__button::before {
   position: absolute;
   content: "";
-  top: 20px;
-  right: 11px;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   width: 18px;
   height: 1px;
   background-color: #1c3374;
@@ -196,25 +243,23 @@
 
   @include vp-767 {
     width: 12px;
-    top: 15px;
-    right: 9px;
   }
 }
 
 .accordion__button::after {
   position: absolute;
   content: "";
-  top: 20px;
-  right: 11px;
-  width: 18px;
-  transform: rotate(90deg);
-  height: 1px;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 18px;
+  width: 1px;
   background-color: #1c3374;
   z-index: 1;
 
   @include vp-767 {
-    width: 12px;
-    top: 15px;
-    right: 9px;
+    height: 12px;
   }
 }

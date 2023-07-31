@@ -1,7 +1,5 @@
 .btns {
   cursor: pointer;
-  padding: 0;
   display: block;
-  background-color: $color-transparent;
-  border: none;
+  user-select: none;
 }

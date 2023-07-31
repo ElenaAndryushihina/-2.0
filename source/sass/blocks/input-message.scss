@@ -1,11 +1,12 @@
-.input-message.is-invalid {
+.input-message.is-invalid,
+.input-message.is-valid {
   width: 85%;
   color: $color-error;
   font-family: $ff-secondary;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .input-message.is-valid {

@@ -191,37 +191,61 @@
 }
 
 .trainer__toggle {
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background-color: $color-transparent;
   position: absolute;
-  z-index: 2;
-}
 
-.trainer__toggle.trainer-toggle-prev {
-  top: 243px;
-  left: 50px;
 
-  @include vp-1199 {
-    top: 214px;
-    left: 45px;
+  &:hover,
+  &:focus {
+    outline: 1px solid #102654;
+  }
+
+  &:active {
+    background-color: #102654;
   }
 
   @include vp-767 {
-    top: 209px;
-    left: 15px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.trainer__toggle svg {
+  stroke: #afafaf;
+}
+
+.trainer__toggle.trainer-toggle-prev {
+  top: 233px;
+  left: 27px;
+
+  @include vp-1199 {
+    top: 202px;
+    left: 26px;
+  }
+
+  @include vp-767 {
+    top: 202px;
+    left: 5px;
   }
 }
 
 .trainer__toggle.trainer-toggle-next {
-  top: 243px;
-  right: 50px;
+  top: 233px;
+  right: 27px;
 
   @include vp-1199 {
-    top: 214px;
-    right: 45px;
+    top: 202px;
+    right: 26px;
   }
 
   @include vp-767 {
-    top: 209px;
-    right: 15px;
+    top: 202px;
+    right: 5px;
   }
 }
 
