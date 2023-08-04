@@ -43,9 +43,10 @@
 .tickets__nav {
   margin: 0 auto 39px;
   width: 29.4%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: repeat(3, min-content);
+  gap: 20px 7%;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 
   @include vp-1199 {
@@ -142,19 +143,24 @@
 .tickets__list {
   margin: 0 auto;
   width: 100%;
-  display: flex;
-  flex: 1 0 33.33%;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  gap: 40px 3.4%;
   z-index: 1;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @include vp-767 {
+    gap: 0;
   }
 }
 
 .tickets__card {
-  width: 31%;
+  width: 100%;
   background-color: $color-default-white;
   padding: 59px 40px 55px;
   display: flex;
@@ -269,8 +275,7 @@
 }
 
 .tickets__card a {
-  padding: 25px 20px 35px;
-  max-height: 14.3%;
+  padding: 25px 20px 25px;
   width: 74%;
   display: block;
   color: $color-sapphire;

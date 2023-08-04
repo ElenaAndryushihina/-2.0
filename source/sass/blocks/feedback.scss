@@ -1,31 +1,54 @@
 .feedback {
-  position: relative;
-  max-width: 1920px;
   margin: 0 auto;
 }
 
+.feedback__container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px 0;
+
+  @include vp-1199 {
+    padding: 0 25px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
 .feedback__wrapper {
-  width: 48.3%;
+  position: relative;
+  width: 60%;
   margin: 0 auto;
   padding: 120px 0 121px;
   display: flex;
   flex-direction: column;
 
   @include vp-1199 {
-    width: 83.5%;
+    width: 100%;
     padding: 88px 0 100px;
   }
 
   @include vp-767 {
-    width: 70.7%;
+    width: 100%;
     padding: 63px 0 70px;
   }
 }
 
 .feedback__swiper {
-  width: 100%;
+  margin: 0 auto;
+  width: 80.5%;
   min-width: 0;
   overflow: hidden;
+
+  @include vp-1199 {
+    width: 79%;
+  }
+
+  @include vp-767 {
+    width: 70.7%;
+  }
 }
 
 .feedback__wrapper h3 {
@@ -147,11 +170,11 @@
 
 .feedback__toggle.swipper-toggle-prev {
   top: 316px;
-  left: 328px;
+  left: 0;
 
   @include vp-1199 {
     top: 276px;
-    left: 27px;
+    left: 0;
   }
 
   @include vp-767 {
@@ -162,11 +185,11 @@
 
 .feedback__toggle.swipper-toggle-next {
   top: 316px;
-  right: 328px;
+  right: 0;
 
   @include vp-1199 {
     top: 276px;
-    right: 27px;
+    right: 0;
   }
 
   @include vp-767 {

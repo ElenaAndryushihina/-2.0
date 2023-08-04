@@ -13,7 +13,7 @@ const initTrainerSwiper = () => new Swiper('.trainer__swiper', {
 
     1200: {
       slidesPerView: 4,
-      spaceBetween: 40,
+      spaceBetween: 35,
       initialSlide: 0,
     },
 

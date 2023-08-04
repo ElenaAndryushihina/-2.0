@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   min-height: 50px;
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    margin-bottom: 11px;
+  }
 
   @include vp-767 {
     width: 100%;
@@ -25,8 +30,12 @@
   padding: 5px 0;
   margin-bottom: 10px;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #74819c;
   outline: none;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
 
   &:hover {
     border-bottom: 1px solid $color-default-white;
@@ -37,6 +46,11 @@
     border: none;
     padding-left: 10px;
     outline: 1px solid $color-default-white;
+  }
+
+  &:focus::placeholder,
+  &:active::placeholder {
+    color: $color-transparent;
   }
 
   &:disabled {

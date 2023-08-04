@@ -53,13 +53,18 @@
   }
 }
 
-.accordion__element:nth-child(n+3) button {
-  top: 25px;
-}
+// .accordion__element:nth-child(n+3) button {
+//   top: 25px;
+// }
 
 .accordion__element.is-active .accordion__button {
   background-color: $color-transparent;
   border: 1px solid #1c3374;
+
+  @include vp-767 {
+    margin: 0;
+    top: 40px;
+  }
 
   &:hover {
     border: none;
@@ -158,7 +163,7 @@
 
   @include vp-767 {
     font-size: 16px;
-    max-width: 100%;
+    max-width: 92%;
   }
 }
 
@@ -178,6 +183,9 @@
   @include vp-767 {
     width: 32px;
     height: 32px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
 
   &:disabled {
@@ -221,10 +229,6 @@
 
   &:active::before {
     background-color: $color-default-white;
-  }
-
-  @include vp-767 {
-    top: 40px;
   }
 }
 
