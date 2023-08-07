@@ -17,34 +17,25 @@
   flex-direction: column;
 
   @include vp-1199 {
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 1 0 23.9%;
-    padding-right: 2px;
-    justify-content: space-between;
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(4, 23.8%);
+    gap: 10px 1.4%;
     margin-bottom: 38px;
   }
 
   @include vp-767 {
-    display: grid;
+    width: 99%;
     grid-template-columns: repeat(2, 48.6%);
-    gap: 8px;
-    margin-bottom: 26px;
-  }
-}
-
-.tabs__button:first-child {
-  padding: 14px 18px 19px;
-
-  @include vp-767 {
-    padding: 12px 0;
+    gap: 8px 8px;
+    margin-bottom: 28px;
   }
 }
 
 .tabs__button {
   max-width: 260px;
   width: 100%;
-  padding: 18px;
+  padding: 16px 18px 18px;
   display: block;
   color: $color-sapphire;
   text-align: center;
@@ -55,12 +46,28 @@
   line-height: 100%;
   background-color: $color-transparent;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  outline: none;
   cursor: pointer;
 
-  &:hover,
+  &:hover {
+    border: 1px solid $color-sapphire;
+  }
+
   &:focus {
-    border: 1px solid $color-transparent;
     outline: 1px solid $color-sapphire;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background: $faq-bg-button;
+    border: none;
+    padding: 17px 19px 19px;
+    outline: none;
+
+    @include vp-767 {
+      padding: 14px;
+    }
   }
 
   &:disabled {
@@ -68,7 +75,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     @include vp-1199 {
       margin-bottom: 0;
@@ -76,23 +83,30 @@
   }
 
   @include vp-1199 {
-    width: 23.9%;
+    width: 100%;
+    max-width: none;
   }
 
   @include vp-767 {
-    padding: 12px 0;
-    width: 100%;
+    padding: 13px 13px 13px;
     font-size: 16px;
     justify-self: center;
   }
 }
 
-.tabs__button.is-active,
-.tabs__button:active {
+.tabs__button.is-active {
   color: $color-default-white;
   background: $faq-bg-button;
+  padding: 17px 19px 19px;
   border: none;
-  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include vp-767 {
+    padding: 14px;
+  }
 }
 
 .tabs__content {

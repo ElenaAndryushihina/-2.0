@@ -15,7 +15,7 @@
   }
 
   @include vp-767 {
-    padding: 24px 0 18px;
+    padding: 21px 0 18px;
   }
 }
 
@@ -53,17 +53,13 @@
   }
 }
 
-// .accordion__element:nth-child(n+3) button {
-//   top: 25px;
-// }
-
 .accordion__element.is-active .accordion__button {
   background-color: $color-transparent;
   border: 1px solid #1c3374;
 
   @include vp-767 {
     margin: 0;
-    top: 40px;
+    top: 36px;
   }
 
   &:hover {

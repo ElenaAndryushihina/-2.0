@@ -32,39 +32,34 @@
             <a href="tel:88005555555">8&#8208;800&#8208;555&#8208;55&#8208;55</a>
           </div>
         </div>
+        <div class="header__hero hero">
+          <ul class="hero__list">
+            <li>Тренажёрный&nbsp;зал</li>
+            <li>Групповые&nbsp;занятия</li>
+            <li>Кардио-зона</li>
+          </ul>
+          <div class="hero__beginning">
+            <h1>Фитнес <br>центр</h1>
+            <h2>Омск</h2>
+          </div>
+          <div class="hero__button">
+            <a href="#tickets" data-smooth-scroll>Купить&nbsp;абонемент</a>
+          </div>
+          <div class="hero__img">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="./img/hero-tablet.webp 1x, ./img/hero-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/hero-desktop.webp 1x, ./img/hero-desktop@2x.webp 2x">
+              <source media="(max-width: 1199px)" srcset="./img/hero-tablet.jpg 1x, ./img/hero-tablet@2x.jpg 2x">
+              <img src="./img/hero-desktop.jpg" width="500" height="556" srcset="./img/hero-desktop@2x.jpg 2x"
+                alt="Фото супермена">
+            </picture>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero__wrapper">
-            <ul class="hero__list">
-              <li>Тренажёрный&nbsp;зал</li>
-              <li>Групповые&nbsp;занятия</li>
-              <li>Кардио-зона</li>
-            </ul>
-            <div class="hero__beginning">
-              <h1>Фитнес <br>центр</h1>
-              <h2>Омск</h2>
-            </div>
-            <div class="hero__button">
-              <a href="#tickets" data-smooth-scroll>Купить&nbsp;абонемент</a>
-            </div>
-            <div class="hero__img">
-              <picture>
-                <source type="image/webp" media="(max-width: 1199px)"
-                  srcset="./img/hero-tablet.webp 1x, ./img/hero-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="./img/hero-desktop.webp 1x, ./img/hero-desktop@2x.webp 2x">
-                <source media="(max-width: 1199px)" srcset="./img/hero-tablet.jpg 1x, ./img/hero-tablet@2x.jpg 2x">
-                <img src="./img/hero-desktop.jpg" width="500" height="556" srcset="./img/hero-desktop@2x.jpg 2x"
-                  alt="Фото супермена">
-              </picture>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="gym">
         <h2 class="visually-hidden">Тренажерный зал</h2>
         <div class="container">
@@ -712,7 +707,7 @@
           <div class="advantages__wrapper">
             <h3>Наши преимущества</h3>
             <ul class="advantages__list">
-              <li class="advantages__item">
+              <li class="advantages__item order-first">
                 <b>900</b>
                 <span>кв/м</span>
                 <h4>Площадь</h4>
@@ -724,7 +719,7 @@
                 <h4>Собственная парковка</h4>
                 <p>Вы&nbsp;всегда найдете место для <br>своей машины на&nbsp;нашей парковке</p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item order-first advantages__item--center">
                 <b>100</b>
                 <h4>Тренажеров</h4>
                 <p>Современные тренажеры <br>на&nbsp;все группы мышц</p>
@@ -751,7 +746,7 @@
           <div class="promo__wrapper">
             <h3>Акции</h3>
             <ul class="promo__list">
-              <li class="promo__card">
+              <li class="promo__card promo__card--img">
                 <article>
                   <h4>Год</h4>
                   <b>4999</b>
@@ -832,7 +827,7 @@
                       </div>
                     </li>
                     <li class="accordion__element" data-accordion="element">
-                      <h4>Сколько тренеров работает в&nbsp;клубе и&nbsp;какова их квалификация?</h4>
+                      <h4>Сколько тренеров работает в&nbsp;клубе и&nbsp;какова их&nbsp;квалификация?</h4>
                       <button class="accordion__button" type="button" data-accordion="button"></button>
                       <div class="accordion__content" data-accordion="content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur
@@ -1128,19 +1123,19 @@
           <div class="footer__nav nav">
             <h4 class="visually-hidden">Навигация</h4>
             <ul class="nav__list">
-              <li class="nav__item">
+              <li class="nav__item nav__item--services">
                 <a href="#">Услуги</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item nav__item--tickets">
                 <a href="#">Абонементы</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item nav__item--promo">
                 <a href="#">Акции</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item nav__item--trainer">
                 <a href="#">Тренеры</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item nav__item--schedule">
                 <a href="#">Расписание</a>
               </li>
             </ul>

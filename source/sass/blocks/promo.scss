@@ -3,7 +3,7 @@
   padding: 135px 0 120px;
 
   @include vp-1199 {
-    padding: 91px 0 100px;
+    padding: 93px 0 100px;
   }
 
   @include vp-767 {
@@ -26,7 +26,7 @@
   @include vp-1199 {
     font-size: 42px;
     letter-spacing: 1.26px;
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   @include vp-767 {
@@ -41,11 +41,11 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 48.3%);
-  gap: 8.4% 3.4%;
+  gap: 40px;
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 48%);
-    gap: 30px;
+    gap: 28px;
   }
 
   @include vp-767 {
@@ -59,7 +59,6 @@
 .promo__card {
   justify-content: center;
   width: 100%;
-  padding: 31px 35px 35px 30px;
   display: flex;
   flex-direction: column;
   border-image: $promo-border 1 / 7px stretch;
@@ -72,19 +71,18 @@
   }
 }
 
-.promo__card:nth-child(3n-2) {
+.promo__card--img {
   width: 100%;
   justify-content: start;
   padding: 0;
   display: flex;
+  grid-row: span 2;
   flex-direction: row;
-  grid-row: 1/3;
   border: none;
 
   @include vp-1199 {
     justify-content: center;
-    grid-row: 1/2;
-    grid-column: 1/3;
+    grid-column: span 2;
   }
 
   @include vp-767 {
@@ -97,7 +95,7 @@
 
 .promo__card h4 {
   padding-left: 5px;
-  margin: 0 0 11px;
+  margin: 0 0 10px;
   color: #1c3374;
   font-family: $ff-secondary;
   font-size: 26px;
@@ -179,8 +177,12 @@
   }
 }
 
-.promo__card:not(:nth-child(3n-2)) {
+.promo__card:not(.promo__card--img) {
+  min-height: 169px;
+  padding: 31px 35px 32px 30px;
+
   @include vp-1199 {
+    padding: 33px 35px 31px 30px;
     min-height: 211px;
   }
 
@@ -189,7 +191,13 @@
   }
 }
 
-.promo__card:not(:nth-child(3n-2)) a::after {
+.promo__card:not(.promo__card--img) h4 {
+  @include vp-1199 {
+    margin-bottom: 12px;
+  }
+}
+
+.promo__card:not(.promo__card--img) a::after {
   content: "";
   position: absolute;
   width: 68px;
@@ -199,15 +207,15 @@
   background-color: #1c3374;
 }
 
-.promo__card:nth-child(3n-2) article {
+.promo__card--img article {
   background-color: $color-torch-red;
-  padding: 40px 45px 45px 40px;
+  padding: 40px 45px 40px 40px;
   display: flex;
   flex-direction: column;
   width: 50%;
 
   @include vp-1199 {
-    padding: 40px 40px 40px;
+    padding: 40px 40px 42px;
     width: 41.16%;
     min-height: 462px;
   }
@@ -218,28 +226,25 @@
   }
 }
 
-.promo__card:nth-child(3n-2) h4 {
+.promo__card--img h4 {
   color: $color-default-white;
   font-size: 28px;
   line-height: 110%;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   @include vp-767 {
     transform: translate(-2px, 0);
   }
 }
 
-.promo__card:nth-child(3n-2) b {
+.promo__card--img b {
   color: $color-default-white;
   font-size: 70px;
   font-style: normal;
   font-weight: 700;
   line-height: 84%;
-  margin-bottom: 26px;
-
-  @include vp-1199 {
-    padding-left: 5px;
-  }
+  margin-bottom: 24px;
+  padding-left: 5px;
 
   @include vp-767 {
     padding-left: 0;
@@ -247,12 +252,12 @@
   }
 }
 
-.promo__card:nth-child(3n-2) p {
+.promo__card--img p {
   color: $color-default-white;
   font-size: 18px;
 }
 
-.promo__card:nth-child(3n-2) a {
+.promo__card--img a {
   color: $color-default-white;
   font-size: 14px;
   letter-spacing: 0.7px;

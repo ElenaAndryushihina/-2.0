@@ -1,27 +1,34 @@
 .header {
-  position: relative;
+  background: $hero-bg-desktop;
+  width: 100%;
+
+  @include vp-1199 {
+    background: $hero-bg-tablet;
+  }
+
+  @include vp-767 {
+    background: $hero-bg-mobile;
+  }
 }
 
 .header__wrapper {
   margin: 0 auto;
-  max-width: 1366px;
   width: 100%;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 30px 103px 0;
+  padding-top: 15px;
   display: flex;
   align-items: center;
 
   @include vp-1199 {
-    padding: 40px 45px 0;
+    padding: 20px 0 0;
   }
 
   @include vp-767 {
-    padding: 15px 15px 0;
+    padding: 1px 15px 0;
   }
+}
+
+.header__logo {
+  margin-top: 14px;
 }
 
 .header__logo-link {
@@ -56,17 +63,12 @@
 
 .header__phone {
   justify-content: end;
-  width: 85%;
+  max-width: 85%;
   margin-left: auto;
-  // display: grid;
-  // grid-template-columns: repeat(5, auto);
-  // grid-column-start: -1;
-  // grid-auto-flow: row;
-  // gap: 10px;
-
-  @include vp-767 {
-    transform: translate(0, 2px);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+  margin-top: 5px;
 }
 
 .header__phone a {
@@ -78,6 +80,8 @@
   letter-spacing: 0.78px;
   color: $color-default-white;
   outline: none;
+  margin-top: 10px;
+  margin-left: 30px;
 
   &:hover,
   &:focus {
@@ -89,7 +93,6 @@
   }
 
   @include vp-1199 {
-    line-height: 0;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.48px;
